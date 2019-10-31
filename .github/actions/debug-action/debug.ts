@@ -1,8 +1,8 @@
 import * as core from '@actions/core'
 
 const run = async (): Promise<void> => {
-  // Action code here
-  core.debug('👋 Hello! You are an amazing person! 🙌')
+  const creature = process.env['INPUT_AMAZING-CREATURE']
+  core.debug(`👋 Hello! You are an amazing ${creature}! 🙌`)
 }
 
 run()
