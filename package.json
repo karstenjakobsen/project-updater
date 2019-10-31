@@ -1,0 +1,24 @@
+{
+  "name": "ps-project-updater",
+  "version": "1.0.0",
+  "description": "Updates projects across github",
+  "repository": "https://github.com/pasientskyhosting/ps-project-updater",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc --noEmit && jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^1.1.0",
+    "@types/jest": "^24.0.21",
+    "@types/node": "^12.12.3",
+    "jest": "^24.9.0",
+    "js-yaml": "^3.13.1",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.4"
+  }
+}
