@@ -17,3 +17,13 @@ typings/
 
 # Optional eslint cache
 .eslintcache
+
+.DS_Store
+.cache
+.cache/*
+**/.cache
+
+*.retry
+*.pyc
+
+.vscode/*
