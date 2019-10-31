@@ -1,8 +1,8 @@
 {
-  "name": "ps-project-updater",
+  "name": "project-updater",
   "version": "1.0.0",
   "description": "Updates projects across github",
-  "repository": "https://github.com/pasientskyhosting/ps-project-updater",
+  "repository": "https://github.com/karstenjakobsen/project-updater",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
