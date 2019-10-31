@@ -29,6 +29,7 @@ describe('debug action debug messages', () => {
 })
 
 describe('debug action output', () => {
+
   it('sets the action output', async () => {
     const setOutputMock = jest.spyOn(core, 'setOutput')
     await run()
@@ -37,4 +38,15 @@ describe('debug action output', () => {
       '👋 Hello! You are an amazing person! 🙌',
     )
   })
+
+  it('does not output debug messages for non-amazing creatures', async () => {
+    process.env['INPUT_AMAZING-CREATURE'] = 'mosquito'
+    const debugMock = jest.spyOn(core, 'debug')
+    const setFailedMock = jest.spyOn(core, 'setFailed')
+    await run()
+    expect(debugMock).toHaveBeenCalledTimes(0)
+    expect(setFailedMock).toHaveBeenCalledWith('Sorry, mosquitos are not amazing 🚫🦟')
+  })
+
+
 })
