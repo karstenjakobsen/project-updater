@@ -16,5 +16,7 @@ jobs:
       - run: npm install
       - run: npm run build
       - uses: ./.github/actions/debug-action
+        id: debug
         with:
           amazing-creature: Octocat
+      - run: echo There was an amazing message - ${{ steps.debug.outputs.amazing-message }}
